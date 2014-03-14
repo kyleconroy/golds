@@ -1,7 +1,7 @@
 package sdl
 
-// #cgo CFLAGS: -I../../../include/
-// #cgo darwin LDFLAGS: ../../../lib/darwin/amd64/libsdl2.a
+// #cgo CFLAGS: -I../../../vendor/sdl2/include/
+// #cgo darwin LDFLAGS: lib/darwin/amd64/libsdl2.a -liconv
 // #cgo darwin LDFLAGS: -framework Cocoa -framework Carbon -framework AudioUnit -framework CoreAudio -framework ForceFeedback -framework IOKit
 // #include "SDL.h"
 import "C"

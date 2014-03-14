@@ -1,6 +1,6 @@
 package sdl
 
-// #cgo darwin LDFLAGS: ../../../lib/darwin/amd64/libsdl2.a
+// #cgo darwin LDFLAGS: lib/darwin/amd64/libsdl2.a -liconv
 // #cgo darwin LDFLAGS: -framework Cocoa -framework Carbon -framework AudioUnit -framework CoreAudio -framework ForceFeedback -framework IOKit
 // #include "SDL.h"
 // #include "SDL_syswm.h"

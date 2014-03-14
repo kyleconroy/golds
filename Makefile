@@ -1,7 +1,18 @@
 export GOPATH:=$(shell pwd)
 
-test:
+platform: src/golds/sdl/lib
 	go build -x examples/platform.go
+
+mixer: src/golds/sdl/lib src/golds/mix/lib
+	go build -x examples/mixer.go
+
+# Hacks all the way down
+src/golds/sdl/lib:
+	cd src/golds/sdl && ln -s ../../../lib lib
+
+src/golds/sdl_mix/lib:
+	cd src/golds/mix && ln -s ../../../lib lib
+
 
 lib/darwin/amd64/libSDL.a:
 	mkdir -p lib/darwin/amd64
